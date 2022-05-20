@@ -1,5 +1,10 @@
-[init]
-	defaultBranch = main
 [user]
-	email = stefan@stfnx.xyz
-	name = Stefan Doe
+    email = stefan@stfnx.xyz
+    name = Stefan Doe
+    signingkey = F304ACAF05050866
+
+[commit]
+    gpgsign = false
+
+[init]
+    defaultBranch = main
