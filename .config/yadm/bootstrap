@@ -1,1 +1,7 @@
 #!/bin/sh
+
+echo "Changing yadm repo URL from HTTPS to SSH"
+yadm remote set-url origin "git@github.com:stfnx/yadm-dotfiles.git"
+
+echo "Renaming yadm remote from origin to github"
+yadm remote rename origin github
