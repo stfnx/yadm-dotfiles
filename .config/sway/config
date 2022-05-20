@@ -13,14 +13,13 @@ set $up    k
 set $right l
 
 # Applications
-set $term    foot
-set $files   thunar
-set $browser firefox-esr
-#set $browser MOZ_ENABLE_WAYLAND=1 firefox-esr
-set $mail    thunderbird
-set $editor  subl
-set $git     smerge
-
+set $term     foot
+set $files    thunar
+set $browser  firefox-esr
+set $mail     thunderbird
+set $editor   subl
+set $git      smerge
+set $launcher wofi --show drun --allow-images
 
 ########################################
 # Style
@@ -85,6 +84,7 @@ bindsym $alt+Shift+e \
 # Applications
 ################
 
+bindsym $super+Space  exec $launcher
 bindsym $super+Return exec $term
 bindsym $super+f      exec $thunar
 bindsym $super+w      exec $browser
