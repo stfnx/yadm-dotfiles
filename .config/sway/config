@@ -86,7 +86,7 @@ bindsym $alt+Shift+e \
 
 bindsym $super+Space  exec $launcher
 bindsym $super+Return exec $term
-bindsym $super+f      exec $thunar
+bindsym $super+f      exec $files
 bindsym $super+w      exec $browser
 bindsym $super+m      exec $mail
 bindsym $super+e      exec $editor
