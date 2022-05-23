@@ -30,6 +30,10 @@ seat seat0 xcursor_theme default 48
 gaps inner 10
 default_border pixel 3
 
+exec_always {
+    gsettings set org.gnome.desktop.interface cursor-size 48
+}
+
 
 ########################################
 # Outputs
