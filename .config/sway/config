@@ -26,6 +26,9 @@ set $launcher wofi --show drun --allow-images
 ########################################
 
 font pango:JetbrainsMono 20
+seat seat0 xcursor_theme default 48
+gaps inner 10
+default_border pixel 3
 
 
 ########################################
