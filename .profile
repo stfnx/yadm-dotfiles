@@ -9,3 +9,6 @@ export QT_SCALE_FACTOR=1.7
 
 # If running bash, include .bashrc
 [ -n "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
+
+# If running from tty1 start sway
+[ "$(tty)" = "/dev/tty1" ] && exec sway
