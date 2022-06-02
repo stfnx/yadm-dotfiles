@@ -248,3 +248,11 @@ exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+
+########################################
+# Window rules
+########################################
+
+for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="pavucontrol"] resize set width 40 ppt height 50 ppt
