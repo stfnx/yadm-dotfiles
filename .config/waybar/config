@@ -1,0 +1,95 @@
+{
+    // Modules
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+    ],
+    "modules-center": [
+
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "network",
+        "pulseaudio",
+        "battery",
+        "custom/clock"
+    ],
+
+    // Bar config
+    "layer": "top",
+    "height": 40,
+    "margin-bottom": 3,
+
+
+    //############################################
+    // Modules
+    //############################################
+
+    // Network
+    "network": {
+        "format-ethernet":         " {ifname}",
+        "format-wifi":             " {essid}",
+        "format-disconnected":     "Disconnected",
+        "tooltip-format-wifi":     "IF: {ifname}\nIP: {ipaddr} /{cidr}\nUL: {bandwidthUpBits}\nDL: {bandwidthDownBits}\nSignal: {signalStrength}%",
+        "tooltip-format-ethernet": "IF: {ifname}\nIP: {ipaddr} /{cidr}\nUL: {bandwidthUpBits}\nDL: {bandwidthDownBits}"
+    },
+
+    // CPU
+    "cpu": {
+        "states":
+        {
+            "high":     70,
+            "critical": 90
+        },
+        "interval":     1,
+        "format":       "C {usage}%",
+    },
+
+    // RAM
+    "memory": {
+        "states":
+        {
+            "high":     70,
+            "critical": 90
+        },
+        "interval":     1,
+        "format":       "R {percentage}%",
+    },
+
+    // PulseAudio
+    "pulseaudio": {
+        "scroll-step":    2,
+        "on-click":       "pactl set-sink-mute   @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "format":         "{icon} {volume}%",
+        "format-muted":   " muted",
+        "format-icons":
+        {
+            "default":    ["", ""],
+            "headphone":  ""
+        },
+    },
+
+    // Battery
+    "battery": {
+        "states":
+        {
+            "warning":     30,
+            "critical":    15
+        },
+        "format":          "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-icons":    ["", "", "", "", ""],
+        "format-time":     "{H}:{M}"
+    },
+
+    // Clock (Custom because builtin isn't working)
+    "custom/clock": {
+        "exec":         "date +'%H:%M'",
+        "interval":     5,
+        "tooltip":      false,
+        "format":       "{icon} {}",
+        "format-icons": ""
+    }
+}

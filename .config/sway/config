@@ -21,6 +21,7 @@ set $editor   subl
 set $git      smerge
 set $launcher wofi --show drun --allow-images
 
+
 ########################################
 # Style
 ########################################
@@ -88,8 +89,8 @@ bindsym $alt+Shift+e \
          -b 'Yes, exit sway' 'swaymsg exit'
 
 # Display Brightness
-bindsym XF86MonBrightnessUp   exec brightnessctl set 10%+ intel_backlight
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%- intel_backlight
+bindsym XF86MonBrightnessUp   exec brightnessctl set 5%+ intel_backlight
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- intel_backlight
 
 # Audio volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -231,17 +232,7 @@ mode "resize" {
 ########################################
 
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while ~/.config/sway/status.sh; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #282828
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    swaybar_command waybar
 }
 
 
